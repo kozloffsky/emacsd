@@ -30,3 +30,7 @@
 
 ;; Don`t defer screen updates
 (setq redisplay-dont-pause t)
+
+(show-paren-mode t)
+
+(provide 'appearance)
