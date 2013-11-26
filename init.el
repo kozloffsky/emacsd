@@ -53,37 +53,11 @@
      git-commit-mode
      gitconfig-mode
      gitignore-mode
+     smex
      clojure-mode
      cider
      cider-tracing)))
-
-(condition-case nil
-    (init--install-packages)
-  (error
-   (packages-install
-   '(magit
-     move-text
-     god-mode
-     gist
-     htmlize
-     visual-regexp
-     flycheck
-     css-eldoc
-     yasnippet
-     ido-vertical-mode
-     ido-at-point
-     simple-httpd
-     nodejs-repl
-     restclient
-     highlight-escape-sequences
-     whitespace-cleanup-mode
-     elisp-slime-nav
-     git-commit-mode
-     gitconfig-mode
-     gitignore-mode
-     clojure-mode
-     cider
-     cider-tracing))))
+  
 
 (condition-case nil
     (init--install-packages)
@@ -103,6 +77,9 @@
 ;; god-mode
 (require 'god-mode)
 (global-set-key (kbd "<escape>") 'god-local-mode)
+
+;smex
+(smex-initialize)
 
 
 
