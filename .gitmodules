@@ -1,0 +1,3 @@
+[submodule "site-lisp/expand-region"]
+	path = site-lisp/expand-region
+	url = http://github.com/magnars/expand-region.el.git
