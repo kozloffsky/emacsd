@@ -13,3 +13,8 @@
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
+
+;; Key Mappings
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
