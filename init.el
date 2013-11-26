@@ -21,6 +21,13 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
 
+;; keep emacs custom-settings in separate file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;nothing to load yet
+;(load custom-file)
+
+;Set up appearance
+(require 'appearance)
 
 
 (require 'uniquify)
