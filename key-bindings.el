@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
 (global-set-key (kbd "C-:") 'hippie-expand-lines)
 (global-set-key (kbd "C-,") 'completion-at-point)
+(global-set-key (kbd "C-<tab>") 'completion-at-point)
 
 
 ;; SMEX
@@ -14,6 +15,8 @@
 ;; old M-X
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; expand region
+(global-set-key (kbd "C-'") 'er/expand-region)
 
 
 

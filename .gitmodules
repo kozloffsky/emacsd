@@ -1,3 +1,9 @@
 [submodule "site-lisp/expand-region"]
 	path = site-lisp/expand-region
 	url = http://github.com/magnars/expand-region.el.git
+[submodule "site-lisp/auto-complete"]
+	path = site-lisp/auto-complete
+	url = http://github.com/m2ym/auto-complete.git
+[submodule "site-lisp/auto-complete2"]
+	path = site-lisp/auto-complete2
+	url = https://github.com/auto-complete/auto-complete

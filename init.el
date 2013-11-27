@@ -1,3 +1,7 @@
+(load-file ".emacs.d/site-lisp/cedet/cedet-devel-load.el")
+
+(semantic-mode 1)
+
 ;;; IDO MODE
 (ido-mode t)
 (setq ido-enable-flex-matching t)
@@ -22,9 +26,20 @@
 (add-to-list 'load-path site-lisp-dir)
 
 ;; keep emacs custom-settings in separate file
-;;(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ;nothing to load yet
-;(load custom-file)
+(load custom-file)
+
+; set up current user settings
+(setq user-settings-dir
+      (concat user-emacs-directory "users/" user-login-name))
+
+(add-to-list 'load-path user-settings-dir)
+
+;;Add external projects to load path
+(dolist (project (directory-files site-lisp-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
 
 ;Set up appearance
 (require 'appearance)
@@ -56,7 +71,8 @@
      smex
      clojure-mode
      cider
-     cider-tracing)))
+     cider-tracing
+     auto-complete)))
   
 
 (condition-case nil
@@ -81,17 +97,12 @@
 ;smex
 (smex-initialize)
 
+(require 'key-bindings)
+
+(require 'expand-region)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("c03d60937e814932cd707a487676875457e0b564a615c1edfd453f23b06fe879" "9527feeeec43970b1d725bdc04e97eb2b03b15be982ac50089ad223d3c6f2920" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(require 'auto-complete-config)
+(ac-config-default)
+(setq-default ac-sources '(ac-source-semantic-raw))
+
