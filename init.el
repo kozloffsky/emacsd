@@ -1,7 +1,3 @@
-(load-file ".emacs.d/site-lisp/cedet/cedet-devel-load.el")
-
-(semantic-mode 1)
-
 ;;; IDO MODE
 (ido-mode t)
 (setq ido-enable-flex-matching t)
@@ -101,8 +97,6 @@
 
 (require 'expand-region)
 
-
 (require 'auto-complete-config)
 (ac-config-default)
-(setq-default ac-sources '(ac-source-semantic-raw))
 
