@@ -18,4 +18,10 @@
 (global-set-key (kbd "C-'") 'er/expand-region)
 
 
+;; windows
+
+(windmove-default-keybindings) ;; Shift + direction
+;(global-set-key (kbd "C-x -") 'toggle-window-split)
+
+
 (provide 'key-bindings)

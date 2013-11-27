@@ -2,3 +2,4 @@
 ** `C-x r q` - realy quit 
 ** `C-x C-c` - delete frame
 ** `C-'` - expand region, like C-w in Intellij Idea
+** `Shift + <direction` - move to window in this direction

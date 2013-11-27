@@ -100,3 +100,12 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+
+;; Gnus (at least try to configure this shit :))
+(setq mail-sources 
+      '((imap :server "imap.gmail.com"
+	      :port 993
+	      :stream "ssl"
+	      :user "kozloffsky@gmail.com"
+	      :password "vtufZombie")))
+
