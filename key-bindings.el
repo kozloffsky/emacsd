@@ -2,8 +2,7 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
-(global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
-(global-set-key (kbd "C-:") 'hippie-expand-lines)
+(global-set-key (kbd "C-.") 'hippie-expand)
 (global-set-key (kbd "C-,") 'completion-at-point)
 (global-set-key (kbd "C-<tab>") 'completion-at-point)
 
