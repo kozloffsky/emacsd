@@ -7,3 +7,6 @@
 [submodule "site-lisp/auto-complete2"]
 	path = site-lisp/auto-complete2
 	url = https://github.com/auto-complete/auto-complete
+[submodule "site-list/js2-mode"]
+	path = site-list/js2-mode
+	url = https://github.com/magnars/js2-mode.git
