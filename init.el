@@ -68,7 +68,8 @@
      clojure-mode
      cider
      cider-tracing
-     auto-complete)))
+     auto-complete
+     php-mode)))
   
 
 (condition-case nil
